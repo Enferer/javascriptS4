@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src='jquery-3.3.1.js'></script>
+</head>
+<body>
+	<div id='exo1' style='border-style: double'>
+	  <p>
+		Voici un <a href=''>premier paragraphe</a> contenant un peu de texte suivi d'une liste:
+	  </p>
+	  <ul>
+	    <li class='impair'>premier item (class='impair')</li>
+	      <ul>
+	          <li><a href=''>sous-item</a> A</li>
+	          <li><a href=''>sous-item</a> B</li>
+	      </ul>
+	    <li class='pair'>deuxième item (class='pair')</li>
+	      <ul>
+	          <li><p>paragraphe du sous-item I</p></li>
+	          <li><p>paragraphe sous-item II</p></li>
+	      </ul>
+	    <li class='impair'>troisième item (class='impair')</li>
+	    <li class='pair'>quatrième item (class='pair')</li>
+	  </ul>
+	  <p>
+		Et encore un peu de texte ensuite, dans un autre paragraphe juste pour le plaisir.
+	  </p>
+	</div>
+	<script type="text/javascript">
+
+		$("#exo1").hide();
+		/*$("#exo1").show();
+		$(".impair").hide();
+		$(".impair").show();
+		$('ul a').hide();
+		$('ul a').show();
+		$('#exo1 > p').hide();
+		$('#exo1 > p').show();
+		$('ul:first').hide();
+		$('ul:first').show();
+		$('#exo1 ul li:nth-child(3)').hide();
+		$('#exo1 ul li:nth-child(3)').show();*/
+
+	</script>	
+
+
+	<div id="exo2" style="border-style: double">
+	  <h3>Titre de niveau 3</h3>
+	  <p>
+		Voici un <a href="">premier paragraphe</a> contenant un peu de texte suivi d'une liste:
+	  </p>
+	  <ul>
+	    <li>premier <a href="">item</a></li>
+	    <li>deuxième item</li>
+	    <li>troisième item</li>
+	    <li>quatrième item</li>
+	  </ul>
+	  <p>Votre age: <input name="age" value="..." type="text"></p>
+	  <p>
+		Et encore un peu de texte ensuite, dans un autre paragraphe juste pour le plaisir.
+	  </p>
+	</div>
+
+	<script type="text/javascript">
+		//console.log($('#exo2').html());
+		//console.log($('#exo2').text());
+		/*$('#exo2 a').attr('href','http://www.univ-lille1.fr');
+		$('#exo2 li').height(30);
+		$('#exo2 input').attr('value','42');*/
+
+	</script>
+
+	<table id="table1">
+		
+	</table>
+
+	<script type="text/javascript">
+		var table = $("#table1");
+		var v = function(){
+			var res = "";
+			var i;
+			var j;
+			for(i = 0 ; i < 8 ; i++){
+				res +="<tr>";
+				for(j = 0 ; j < 8 ; j++){
+					res += "<td>"+(i*8+j+1)+"</td>";
+				}
+				res += "</tr>";
+			}
+			return res;
+		}();
+
+		table.append($(v));
+	</script>
+
+	<script src='N4P1.js'></script></p>
+
+</body>
+</html>
